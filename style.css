@@ -1,0 +1,41 @@
+#firstLineContainer {
+    display: flex;
+    box-sizing: border-box;
+}
+
+#charAtMainContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 250px;
+}
+
+h2,
+p {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100px;
+}
+
+#charAtOutputResult {
+    border: 1px solid black;
+    width: 105px;
+    height: 20px;
+}
+
+#charAtOutputContainer,
+#charAtInputContainer,
+#charAtVariableContainer {
+    display: flex;
+    justify-content: right;
+    padding-right: 40px;
+}
