@@ -1,13 +1,16 @@
 #firstLineContainer {
     display: flex;
     box-sizing: border-box;
+    flex-wrap: wrap
 }
 
-#charAtMainContainer {
+.methodMainContainer {
     display: flex;
     flex-direction: column;
     margin: 0px;
     width: 300px;
+    padding: 5px;
+    flex-shrink: 0;
 }
 
 h2,
@@ -32,14 +35,15 @@ input {
     width: 100px;
 }
 
-#charAtOutputResult {
+#charAtOutputResult,
+#lengthOutputResult {
     border: 1px solid black;
     width: 105px;
     height: 20px;
 }
 
 .methodOutputContainer,
-.methodInputContainer,
+.methodNumberContainer,
 .methodVariableContainer {
     display: flex;
     justify-content: right;

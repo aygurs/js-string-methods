@@ -9,17 +9,17 @@
 <body>
     <h1 id="mainTitle">JavaScript String Methods</h1>
     <div id="firstLineContainer">
-        <div id="charAtMainContainer">
+        <div class="methodMainContainer">
             <h2 class="methodTitle">variable.charAt()</h2>
             <p>This method will return the character at the index number put between the brackets.</p>
             <p>The syntax for this method looks like this: word.charAt(indexNumber).</p>
-            <p>Remember - computers count from 0! So if the index number is 2, it will count: 0, 1, 2 (Meaning you will get the 3rd character).</p>
+            <p>Remember - computers count index numbers from 0! So if the index number is 2, it will count: 0, 1, 2 (Meaning you will get the 3rd character).</p>
             <p>If charAt() cannot perform its function, it will return an empty string. Try to find what causes an error!</p>
             <div class="methodVariableContainer">
                 <label>word:</label> 
                 <input type="text" id="charAtVariableContent">
             </div>
-            <div class="methodInputContainer">
+            <div class="methodNumberContainer">
                 <label>indexNumber:</label> 
                 <input type="number" id="charAtNumber">
             </div>
@@ -29,6 +29,24 @@
             <div class="methodOutputContainer">
                 Output:
                 <div id="charAtOutputResult"></div>
+            </div>
+        </div>
+        <div class="methodMainContainer">
+            <h2 class="methodTitle">variable.length</h2>
+            <p>This method will return the length (number of characters) of the value of the variable. It takes no parameters.</p>
+            <p>The syntax for this method looks like this: word.length</p>
+            <p>For length, the computer counts from 1 (1 = first character). It only counts from 0 in the context of index numbers.</p>
+            <p>If any characters outside the Basic Multilingual Plane (BMP) are used (like Emojis) it could provide an inaccurate reading (as it counts Emojis as two characters). Try to find what causes an error!</p>
+            <div class="methodVariableContainer">
+                <label>word:</label> 
+                <input type="text" id="lengthVariableContent">
+            </div>
+            <div class="methodButtonContainer">
+                <button id="lengthButton">Test</button>
+            </div>
+            <div class="methodOutputContainer">
+                Output:
+                <div id="lengthOutputResult"></div>
             </div>
         </div>
     </div>

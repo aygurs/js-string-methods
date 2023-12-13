@@ -24,7 +24,6 @@ charAtButton.addEventListener('click', function() {
     else if(!Number.isInteger(charAtNumberValue)) {
         charAtOutputResult.textContent = `It's ${charAtVariableValue.charAt(charAtNumberValue)}, but it ignores your decimal and uses the integer portion only. Error found!`;
         charAtOutputResult.style.height = 'auto'
-        console.log(charAtNumberValue)
     }
 
     //Checks if input number is out of range for input variable
@@ -43,5 +42,35 @@ charAtButton.addEventListener('click', function() {
     else {
         charAtOutputResult.textContent = charAtVariableValue.charAt(charAtNumberValue);
         console.log(charAtNumberValue)
+    }
+});
+
+//length method and error handling
+const lengthVariableContent = document.querySelector('#lengthVariableContent');
+const lengthOutputResult = document.querySelector('#lengthOutputResult');
+const lengthButton = document.querySelector('#lengthButton');
+
+lengthButton.addEventListener('click', function() {
+    const lengthVariableValue = lengthVariableContent.value;
+
+    if(!/\S/.test(lengthVariableValue) === true) {
+        lengthOutputResult.textContent = `This method returns 0 if no word is given! Error found!`
+        lengthOutputResult.style.height = 'auto'
+    }
+
+    else if(/^[0-9]+$/.test(lengthVariableValue)) {
+        lengthOutputResult.textContent = `It's ${lengthOutputResult.textContent = lengthVariableValue.length}, but in normal code, using length on numbers that aren't a string would result in undefined. Error found!`
+        lengthOutputResult.style.height = 'auto'
+    }
+
+    else if(!(lengthVariableValue.length === Array.from(lengthVariableValue).length)) {
+        lengthOutputResult.textContent = `It's ${lengthOutputResult.textContent = lengthVariableValue.length}, but you're probably using an Emoji or surrogate pair so it returns double the visible length! Error found!`
+        lengthOutputResult.style.height = 'auto'
+    }
+
+    else{
+        lengthOutputResult.textContent = lengthVariableValue.length;
+        console.log(Array.from(lengthVariableValue).length)
+        console.log(lengthVariableValue.length)
     }
 });
