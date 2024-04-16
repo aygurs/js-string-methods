@@ -36,7 +36,8 @@ input {
 }
 
 #charAtOutputResult,
-#lengthOutputResult {
+#lengthOutputResult,
+#indexOfOutputResult {
     border: 1px solid black;
     width: 105px;
     height: 20px;
@@ -44,7 +45,8 @@ input {
 
 .methodOutputContainer,
 .methodNumberContainer,
-.methodVariableContainer {
+.methodVariableContainer,
+.methodVariableContainer2 {
     display: flex;
     justify-content: right;
     padding-right: 80px;
