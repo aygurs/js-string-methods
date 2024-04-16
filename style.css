@@ -1,7 +1,21 @@
+h1 {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+#introParagraph {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: left;
+    font-weight: lighter;
+}
+
 #firstLineContainer {
     display: flex;
     box-sizing: border-box;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .methodMainContainer {
