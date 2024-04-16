@@ -92,11 +92,24 @@ indexOfButton.addEventListener('click', function() {
         indexOfOutputResult.style.height = 'auto'
     }
     else if(!/\S/.test(indexOfVariableValue2) === true) {
-        indexOfOutputResult.textContent = `If no argument is put in the brackets, JS returns 0 as it think's you're searching for an empty string. Error found!`
+        indexOfOutputResult.textContent = `If no argument (character) is put in the brackets, JS returns 0 as it think's you're searching for an empty string. Error found!`
+        indexOfOutputResult.style.height = 'auto'
+    }    
+    else if(indexOfVariableValue.indexOf(indexOfVariableValue2) === -1 && indexOfVariableValue.toLowerCase().indexOf((indexOfVariableValue2.toLowerCase())) !== -1) {
+        indexOfOutputResult.textContent = `-1. This is a case sensitive error! Error found!`
         indexOfOutputResult.style.height = 'auto'
     }
     else if(indexOfVariableValue.indexOf(indexOfVariableValue2) === -1) {
-        indexOfOutputResult.textContent = `-1. The character was not found in the word. Error found!`
+        indexOfOutputResult.textContent = `-1. The character was not found in the word.`
         indexOfOutputResult.style.height = 'auto'
     }
+    else if(indexOfNumberValue < 0) {
+        indexOfOutputResult.textContent = `It's ${indexOfVariableValue.indexOf(indexOfVariableValue2, indexOfNumberValue)} as your negative index number was treated as 0.`
+        indexOfOutputResult.style.height = 'auto'
+    }
+    else {
+        indexOfOutputResult.textContent = `${indexOfVariableValue.indexOf(indexOfVariableValue2, indexOfNumberValue)}`
+        indexOfOutputResult.style.height = 'auto'
+    }
+
 })
