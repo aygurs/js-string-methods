@@ -53,21 +53,25 @@ const lengthButton = document.querySelector('#lengthButton');
 lengthButton.addEventListener('click', function() {
     const lengthVariableValue = lengthVariableContent.value;
 
+    //Checks if input string is empty
     if(!/\S/.test(lengthVariableValue) === true) {
         lengthOutputResult.textContent = `This method returns 0 if no word is given! Error found!`
         lengthOutputResult.style.height = 'auto'
     }
 
+    //Checks if input is numbers
     else if(/^[0-9]+$/.test(lengthVariableValue)) {
         lengthOutputResult.textContent = `It's ${lengthOutputResult.textContent = lengthVariableValue.length}, but in normal code, using length on numbers that aren't a string would result in undefined. Error found!`
         lengthOutputResult.style.height = 'auto'
     }
 
+    //Checks for special characters
     else if(!(lengthVariableValue.length === Array.from(lengthVariableValue).length)) {
         lengthOutputResult.textContent = `It's ${lengthOutputResult.textContent = lengthVariableValue.length}, but you're probably using an Emoji or surrogate pair so it returns double the visible length! Error found!`
         lengthOutputResult.style.height = 'auto'
     }
 
+    //No errors
     else{
         lengthOutputResult.textContent = lengthVariableValue.length;
         console.log(Array.from(lengthVariableValue).length)
@@ -87,29 +91,96 @@ indexOfButton.addEventListener('click', function() {
     const indexOfVariableValue2 = indexOfVariableContent2.value;
     const indexOfNumberValue = Number(indexOfNumber.value);
     
+    //Checks if input word is empty
     if(!/\S/.test(indexOfVariableValue) === true) {
         indexOfOutputResult.textContent = `Hey! We at least need a word to test for errors!`
         indexOfOutputResult.style.height = 'auto'
     }
+
+    //Checks if character variable is empty
     else if(!/\S/.test(indexOfVariableValue2) === true) {
         indexOfOutputResult.textContent = `If no argument (character) is put in the brackets, JS returns 0 as it think's you're searching for an empty string. Error found!`
         indexOfOutputResult.style.height = 'auto'
-    }    
+    }  
+    
+    //Checks if there is a case sensitive error
     else if(indexOfVariableValue.indexOf(indexOfVariableValue2) === -1 && indexOfVariableValue.toLowerCase().indexOf((indexOfVariableValue2.toLowerCase())) !== -1) {
         indexOfOutputResult.textContent = `-1. This is a case sensitive error! Error found!`
         indexOfOutputResult.style.height = 'auto'
     }
+
+    //If the character was not found in the word
     else if(indexOfVariableValue.indexOf(indexOfVariableValue2) === -1) {
         indexOfOutputResult.textContent = `-1. The character was not found in the word.`
         indexOfOutputResult.style.height = 'auto'
     }
+
+    //If a negative index was entered
     else if(indexOfNumberValue < 0) {
         indexOfOutputResult.textContent = `It's ${indexOfVariableValue.indexOf(indexOfVariableValue2, indexOfNumberValue)} as your negative index number was treated as 0.`
         indexOfOutputResult.style.height = 'auto'
     }
+
+    //No errors
     else {
         indexOfOutputResult.textContent = `${indexOfVariableValue.indexOf(indexOfVariableValue2, indexOfNumberValue)}`
         indexOfOutputResult.style.height = 'auto'
+    }
+
+})
+
+//lastIndexOf method and error handling
+const lastIndexOfVariableContent = document.querySelector('#lastIndexOfVariableContent');
+const lastIndexOfVariableContent2 = document.querySelector('#lastIndexOfVariableContent2');
+const lastIndexOfNumber = document.querySelector('#lastIndexOfNumber');
+const lastIndexOfButton = document.querySelector('#lastIndexOfButton');
+const lastIndexOfOutputResult = document.querySelector('#lastIndexOfOutputResult');
+
+lastIndexOfButton.addEventListener('click', function() {
+    const lastIndexOfVariableValue = lastIndexOfVariableContent.value;
+    const lastIndexOfVariableValue2 = lastIndexOfVariableContent2.value;
+    const lastIndexOfNumberValue = lastIndexOfNumber.value;
+
+    //Checks if input word is empty
+    if(!/\S/.test(lastIndexOfVariableValue) === true) {
+        lastIndexOfOutputResult.textContent = `Hey! We at least need a word to test for errors!`
+        lastIndexOfOutputResult.style.height = 'auto'
+    }
+
+    //Checks if character variable is empty
+    else if(!/\S/.test(lastIndexOfVariableValue2) === true) {
+        lastIndexOfOutputResult.textContent = `If no argument (character) is put in the brackets, JS returns ${lastIndexOfVariableValue.length - 1} (index of last character) as it think's you're searching for an empty string. Error found!`
+        lastIndexOfOutputResult.style.height = 'auto'
+    }   
+    
+    //Checks if there is a case sensitive error
+    else if(lastIndexOfVariableValue.lastIndexOf(lastIndexOfVariableValue2) === -1 && lastIndexOfVariableValue.toLowerCase().lastIndexOf((lastIndexOfVariableValue2.toLowerCase())) !== -1) {
+        lastIndexOfOutputResult.textContent = `-1. This is a case sensitive error! Error found!`
+        lastIndexOfOutputResult.style.height = 'auto'
+    }
+
+    //If the character was not found in the word
+    else if(lastIndexOfVariableValue.lastIndexOf(lastIndexOfVariableValue2) === -1) {
+        lastIndexOfOutputResult.textContent = `-1. The character was not found in the word.`
+        lastIndexOfOutputResult.style.height = 'auto'
+    }
+
+    //If a negative index was entered
+    else if(lastIndexOfNumberValue < 0) {
+        lastIndexOfOutputResult.textContent = `It's ${lastIndexOfVariableValue.lastIndexOf(lastIndexOfVariableValue2, lastIndexOfNumberValue)} as your negative index number was treated as 0.`
+        lastIndexOfOutputResult.style.height = 'auto'
+    }
+
+    //If the index number is left empty, this is caught otherwise the default is 0 when converted to a number, which alters the results
+    else if(lastIndexOfNumberValue === '') {
+        lastIndexOfOutputResult.textContent = `${lastIndexOfVariableValue.lastIndexOf(lastIndexOfVariableValue2)}`
+        lastIndexOfOutputResult.style.height = 'auto'
+    }
+
+    //No errors
+    else {
+        lastIndexOfOutputResult.textContent = `${lastIndexOfVariableValue.lastIndexOf(lastIndexOfVariableValue2, Number(lastIndexOfNumberValue))}`
+        lastIndexOfOutputResult.style.height = 'auto'
     }
 
 })
