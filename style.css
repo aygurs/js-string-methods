@@ -37,7 +37,8 @@ input {
 
 #charAtOutputResult,
 #lengthOutputResult,
-#indexOfOutputResult {
+#indexOfOutputResult,
+#lastIndexOfOutputResult {
     border: 1px solid black;
     width: 105px;
     height: 20px;
