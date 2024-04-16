@@ -51,3 +51,7 @@ input {
     justify-content: right;
     padding-right: 80px;
 }
+
+label {
+    text-align: right;
+}

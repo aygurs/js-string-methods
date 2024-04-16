@@ -74,3 +74,29 @@ lengthButton.addEventListener('click', function() {
         console.log(lengthVariableValue.length)
     }
 });
+
+//indexOf method and error handling
+const indexOfVariableContent = document.querySelector('#indexOfVariableContent');
+const indexOfVariableContent2 = document.querySelector('#indexOfVariableContent2');
+const indexOfNumber = document.querySelector('#indexOfNumber');
+const indexOfButton = document.querySelector('#indexOfButton');
+const indexOfOutputResult = document.querySelector('#indexOfOutputResult');
+
+indexOfButton.addEventListener('click', function() {
+    const indexOfVariableValue = indexOfVariableContent.value;
+    const indexOfVariableValue2 = indexOfVariableContent2.value;
+    const indexOfNumberValue = Number(indexOfNumber.value);
+    
+    if(!/\S/.test(indexOfVariableValue) === true) {
+        indexOfOutputResult.textContent = `Hey! We at least need a word to test for errors!`
+        indexOfOutputResult.style.height = 'auto'
+    }
+    else if(!/\S/.test(indexOfVariableValue2) === true) {
+        indexOfOutputResult.textContent = `If no argument is put in the brackets, JS returns 0 as it think's you're searching for an empty string. Error found!`
+        indexOfOutputResult.style.height = 'auto'
+    }
+    else if(indexOfVariableValue.indexOf(indexOfVariableValue2) === -1) {
+        indexOfOutputResult.textContent = `-1. The character was not found in the word. Error found!`
+        indexOfOutputResult.style.height = 'auto'
+    }
+})
