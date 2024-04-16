@@ -1,14 +1,36 @@
+html {
+    font-family: "Roboto", sans-serif;
+}
+
 h1 {
     display: flex;
     box-sizing: border-box;
     justify-content: center;
+    font-size: 70px;
+    font-weight: 900;
+    font-style: normal;
+    margin: 10px;
 }
 
 #introParagraph {
     display: flex;
     box-sizing: border-box;
-    justify-content: left;
+    justify-content: center;
+    text-align: center;
     font-weight: lighter;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#hero-section {
+    margin-left: 40px;
+    margin-right: 40px;
+    background-image: url('Images/gradient.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: darkorange;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 #firstLineContainer {
@@ -56,6 +78,7 @@ input {
     border: 1px solid black;
     width: 105px;
     height: 20px;
+    background-color: white;
 }
 
 .methodOutputContainer,

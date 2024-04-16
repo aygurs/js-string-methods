@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript String Methods</title>
@@ -14,101 +17,102 @@
         string method does. You can then enter your own parameters and try to find errors in the methods
         that you should look out for when you use them in your future code!
     </h3>
-    <div id="firstLineContainer">
-        <div class="methodMainContainer">
-            <h2 class="methodTitle">variable.charAt()</h2>
-            <p>This method will return the character at the index number put between the brackets.</p>
-            <p>The syntax for this method looks like this: word.charAt(indexNumber).</p>
-            <p>Remember - computers count index numbers from 0! So if the index number is 2, it will count: 0, 1, 2 (Meaning you will get the 3rd character).</p>
-            <p>If charAt() cannot perform its function, it will return an empty string. Try to find what causes an error!</p>
-            <div class="methodVariableContainer">
-                <label>word:</label> 
-                <input type="text" id="charAtVariableContent">
+    <div id="hero-section">
+        <div id="firstLineContainer">
+            <div class="methodMainContainer">
+                <h2 class="methodTitle">variable.charAt()</h2>
+                <p>This method will return the character at the index number put between the brackets.</p>
+                <p>The syntax for this method looks like this: word.charAt(indexNumber).</p>
+                <p>Remember - computers count index numbers from 0! So if the index number is 2, it will count: 0, 1, 2 (Meaning you will get the 3rd character).</p>
+                <p>If charAt() cannot perform its function, it will return an empty string. Try to find what causes an error!</p>
+                <div class="methodVariableContainer">
+                    <label>word:</label> 
+                    <input type="text" id="charAtVariableContent">
+                </div>
+                <div class="methodNumberContainer">
+                    <label>indexNumber:</label> 
+                    <input type="number" id="charAtNumber">
+                </div>
+                <div class="methodButtonContainer">
+                    <button id="charAtButton">Test</button>
+                </div>
+                <div class="methodOutputContainer">
+                    Output:
+                    <div id="charAtOutputResult"></div>
+                </div>
             </div>
-            <div class="methodNumberContainer">
-                <label>indexNumber:</label> 
-                <input type="number" id="charAtNumber">
+            <div class="methodMainContainer">
+                <h2 class="methodTitle">variable.length</h2>
+                <p>This method will return the length (number of characters) of the value of the variable. It takes no parameters.</p>
+                <p>The syntax for this method looks like this: word.length</p>
+                <p>For length, the computer counts from 1 (1 = first character). It only counts from 0 in the context of index numbers.</p>
+                <p>If any characters outside the Basic Multilingual Plane (BMP) are used (like Emojis) it could provide an inaccurate reading (as it counts Emojis as two characters). Try to find what causes an error!</p>
+                <div class="methodVariableContainer">
+                    <label>word:</label> 
+                    <input type="text" id="lengthVariableContent">
+                </div>
+                <div class="methodButtonContainer">
+                    <button id="lengthButton">Test</button>
+                </div>
+                <div class="methodOutputContainer">
+                    Output:
+                    <div id="lengthOutputResult"></div>
+                </div>
             </div>
-            <div class="methodButtonContainer">
-                <button id="charAtButton">Test</button>
+            <div class="methodMainContainer">
+                <h2 class="methodTitle">variable.indexOf()</h2>
+                <p>This method will return the index of only the FIRST match of the character put in the brackets.</p>
+                <p>The syntax for this method looks like this: word.indexOf(character, index).</p>
+                <p>This method is case sensitive and return -1 if no match is found. It searches from left to right of the word.</p>
+                <p>A second argument can be used called index. You can choose where indexOf() starts it's search! If this is empty, the default is 0 (the beginning). Negative numbers are treated as 0.</p>
+                <div class="methodVariableContainer">
+                    <label>word:</label> 
+                    <input type="text" id="indexOfVariableContent">
+                </div>
+                <div class="methodVariableContainer2">
+                    <label>character/s:</label> 
+                    <input type="text" id="indexOfVariableContent2">
+                </div>
+                <div class="methodNumberContainer">
+                    <label>indexNumber (optional):</label> 
+                    <input type="number" id="indexOfNumber">
+                </div>
+                <div class="methodButtonContainer">
+                    <button id="indexOfButton">Test</button>
+                </div>
+                <div class="methodOutputContainer">
+                    Output:
+                    <div id="indexOfOutputResult"></div>
+                </div>
             </div>
-            <div class="methodOutputContainer">
-                Output:
-                <div id="charAtOutputResult"></div>
-            </div>
-        </div>
-        <div class="methodMainContainer">
-            <h2 class="methodTitle">variable.length</h2>
-            <p>This method will return the length (number of characters) of the value of the variable. It takes no parameters.</p>
-            <p>The syntax for this method looks like this: word.length</p>
-            <p>For length, the computer counts from 1 (1 = first character). It only counts from 0 in the context of index numbers.</p>
-            <p>If any characters outside the Basic Multilingual Plane (BMP) are used (like Emojis) it could provide an inaccurate reading (as it counts Emojis as two characters). Try to find what causes an error!</p>
-            <div class="methodVariableContainer">
-                <label>word:</label> 
-                <input type="text" id="lengthVariableContent">
-            </div>
-            <div class="methodButtonContainer">
-                <button id="lengthButton">Test</button>
-            </div>
-            <div class="methodOutputContainer">
-                Output:
-                <div id="lengthOutputResult"></div>
-            </div>
-        </div>
-        <div class="methodMainContainer">
-            <h2 class="methodTitle">variable.indexOf()</h2>
-            <p>This method will return the index of only the FIRST match of the character put in the brackets.</p>
-            <p>The syntax for this method looks like this: word.indexOf(character, index).</p>
-            <p>This method is case sensitive and return -1 if no match is found. It searches from left to right of the word.</p>
-            <p>A second argument can be used called index. You can choose where indexOf() starts it's search! If this is empty, the default is 0 (the beginning). Negative numbers are treated as 0.</p>
-            <div class="methodVariableContainer">
-                <label>word:</label> 
-                <input type="text" id="indexOfVariableContent">
-            </div>
-            <div class="methodVariableContainer2">
-                <label>character/s:</label> 
-                <input type="text" id="indexOfVariableContent2">
-            </div>
-            <div class="methodNumberContainer">
-                <label>indexNumber (optional):</label> 
-                <input type="number" id="indexOfNumber">
-            </div>
-            <div class="methodButtonContainer">
-                <button id="indexOfButton">Test</button>
-            </div>
-            <div class="methodOutputContainer">
-                Output:
-                <div id="indexOfOutputResult"></div>
-            </div>
-        </div>
-        <div class="methodMainContainer">
-            <h2 class="methodTitle">variable.lastIndexOf()</h2>
-            <p>This method will return the index of only the LAST match of the character put in the brackets.</p>
-            <p>The syntax for this method looks like this: word.lastIndexOf(character, index).</p>
-            <p>This method is case sensitive and return -1 if no match is found. It searches from left to right of the word.</p>
-            <p>A second argument can be used called index. You can choose where lastIndexOf() starts it's search! If this is empty, the default is +infinity (the end up until the beginning). Negative numbers are treated as 0.</p>
-            <div class="methodVariableContainer">
-                <label>word:</label> 
-                <input type="text" id="lastIndexOfVariableContent">
-            </div>
-            <div class="methodVariableContainer2">
-                <label>character/s:</label> 
-                <input type="text" id="lastIndexOfVariableContent2">
-            </div>
-            <div class="methodNumberContainer">
-                <label>indexNumber (optional):</label> 
-                <input type="number" id="lastIndexOfNumber">
-            </div>
-            <div class="methodButtonContainer">
-                <button id="lastIndexOfButton">Test</button>
-            </div>
-            <div class="methodOutputContainer">
-                Output:
-                <div id="lastIndexOfOutputResult"></div>
+            <div class="methodMainContainer">
+                <h2 class="methodTitle">variable.lastIndexOf()</h2>
+                <p>This method will return the index of only the LAST match of the character put in the brackets.</p>
+                <p>The syntax for this method looks like this: word.lastIndexOf(character, index).</p>
+                <p>This method is case sensitive and return -1 if no match is found. It searches from left to right of the word.</p>
+                <p>A second argument can be used called index. You can choose where lastIndexOf() starts it's search! If this is empty, the default is +infinity (the end up until the beginning). Negative numbers are treated as 0.</p>
+                <div class="methodVariableContainer">
+                    <label>word:</label> 
+                    <input type="text" id="lastIndexOfVariableContent">
+                </div>
+                <div class="methodVariableContainer2">
+                    <label>character/s:</label> 
+                    <input type="text" id="lastIndexOfVariableContent2">
+                </div>
+                <div class="methodNumberContainer">
+                    <label>indexNumber (optional):</label> 
+                    <input type="number" id="lastIndexOfNumber">
+                </div>
+                <div class="methodButtonContainer">
+                    <button id="lastIndexOfButton">Test</button>
+                </div>
+                <div class="methodOutputContainer">
+                    Output:
+                    <div id="lastIndexOfOutputResult"></div>
+                </div>
             </div>
         </div>
     </div>
-
     <script src="./index.js"></script>
 </body>
 </html>
