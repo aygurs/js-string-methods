@@ -43,10 +43,24 @@ h1 {
 .methodMainContainer {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin: 0px;
     width: 300px;
     padding: 5px;
     flex-shrink: 0;
+}
+
+.methodTextContainer {
+    width: 310px;
+    height: 350px;
+}
+
+.methodInputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 310px;
+    height: 230px;
 }
 
 h2,
