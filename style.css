@@ -1,12 +1,25 @@
 html {
     font-family: "Roboto", sans-serif;
+    margin-bottom: 30px;
+}
+
+body {
+    margin: 0;
+}
+
+#nav-bar {
+    background-color: white;
+    padding: 40px;
+    padding-bottom: 20px;
 }
 
 h1 {
     display: flex;
     box-sizing: border-box;
     justify-content: center;
-    font-size: 70px;
+    align-items: center;
+    text-align: center;
+    font-size: 60px;
     font-weight: 900;
     font-style: normal;
     margin: 10px;
@@ -20,17 +33,21 @@ h1 {
     font-weight: lighter;
     font-weight: 300;
     font-style: normal;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 #hero-section {
     margin-left: 40px;
     margin-right: 40px;
-    background-image: url('Images/gradient.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: darkorange;
     border-radius: 20px;
     padding: 10px;
+    background-color: darkorange;
+    background-image: url('Images/bg2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
 #firstLineContainer {
@@ -45,14 +62,16 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     margin: 0px;
-    width: 300px;
     padding: 5px;
     flex-shrink: 0;
+    text-align: left;
 }
 
 .methodTextContainer {
     width: 310px;
-    height: 350px;
+    height: 390px;
+    font-weight: 350;
+    padding-bottom: 20px;
 }
 
 .methodInputContainer {
@@ -60,19 +79,28 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     width: 310px;
-    height: 230px;
+    height: 310px;
 }
 
-h2,
-p {
-    margin: 0px;
+h2 {
     display: flex;
     justify-content: center;
-    text-align: center;
+    margin: 0;
+    font-weight: 500;
+    font-size: 30px;
+    padding-bottom: 20px;
 }
 
 p {
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border-radius: 5px;
+    background-color: white;
+    border: 0;
 }
 
 .methodButtonContainer {
