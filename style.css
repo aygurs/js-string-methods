@@ -8,21 +8,53 @@ body {
 }
 
 #nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: white;
-    padding: 40px;
-    padding-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(0, 153, 255);
+    background-image: url('Images/bg7.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-h1 {
+#nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#string-methods-button,
+#array-methods-button {
+    background-color: transparent;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border-color 0.8s ease;
+}
+
+#string-methods-button:hover,
+#array-methods-button:hover {
+border-color: white;
+}
+
+#mainTitle {
     display: flex;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 60px;
+    font-size: 70px;
     font-weight: 900;
     font-style: normal;
     margin: 10px;
+    padding: 40px;
+    padding-top: 80px;
 }
 
 #introParagraph {
@@ -35,6 +67,7 @@ h1 {
     font-style: normal;
     margin-left: 200px;
     margin-right: 200px;
+    padding-bottom: 40px;
 }
 
 #hero-section {
@@ -42,8 +75,8 @@ h1 {
     margin-right: 40px;
     border-radius: 20px;
     padding: 10px;
-    background-color: darkorange;
-    background-image: url('Images/bg2.jpg');
+    background-color: rgb(0, 153, 255);
+    background-image: url('Images/bg7.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,9 +95,16 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     margin: 0px;
-    padding: 5px;
+    padding: 15px;
     flex-shrink: 0;
     text-align: left;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    transition: border-color 0.8s ease;
+}
+
+.methodMainContainer:hover {
+    border-color: white;
 }
 
 .methodTextContainer {
@@ -72,6 +112,7 @@ h1 {
     height: 390px;
     font-weight: 350;
     padding-bottom: 20px;
+    padding-top: 30px;
 }
 
 .methodInputContainer {
@@ -79,10 +120,10 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     width: 310px;
-    height: 310px;
+    height: 340px;
 }
 
-h2 {
+.methodTextContainer h2 {
     display: flex;
     justify-content: center;
     margin: 0;
@@ -91,16 +132,17 @@ h2 {
     padding-bottom: 20px;
 }
 
-p {
+.methodTextContainer p {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
 }
 
-button {
+.methodInputContainer button {
     border-radius: 5px;
     background-color: white;
     border: 0;
+    cursor: pointer;
 }
 
 .methodButtonContainer {
@@ -129,7 +171,7 @@ input {
 .methodVariableContainer2 {
     display: flex;
     justify-content: right;
-    padding-right: 80px;
+    padding-right: 100px;
 }
 
 label {
