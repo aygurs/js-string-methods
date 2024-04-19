@@ -18,20 +18,20 @@
         </div>
     </div>
     <h1 id="mainTitle">JavaScript String Methods</h1>
-    <h3 id="introParagraph">
-        Your beginner friendly guide to JavaScript String Methods! Each section will explain what each
-        string method does. You can then enter your own parameters for each argument, and try to find errors.
-        Look out for these errors when you use these methods in your future code!
-    </h3>
-    <div id="hero-section">
+        <h3 id="introParagraph">
+            Your beginner friendly guide to JavaScript String Methods! Each section will explain what each
+            string method does. You can then enter your own parameters for each argument of each method. The aim is to try to enter
+            different parameters until you find an error. Look out for these errors when you use these methods in your future code!
+        </h3>
+    <div id="hero-section1">
         <div id="firstLineContainer">
             <div class="methodMainContainer">
                 <div class="methodTextContainer">
                     <h2 class="methodTitle">variable.charAt()</h2>
                     <p>This method will return the character at the index number put between the brackets.</p>
-                    <p>The syntax for this method looks like this: word.charAt(indexNumber).</p>
+                    <p>The syntax for this method looks like this: word.charAt(indexNumber)</p>
                     <p>Remember - computers count index numbers from 0! So if the index number is 2, it will count: 0, 1, 2 (Meaning you will get the 3rd character).</p>
-                    <p>If charAt() cannot perform its function, it will return an empty string. Try to find what causes an error!</p>
+                    <p>If charAt() cannot perform its function, it will return an empty string.</p>
                 </div>
                 <div class="methodInputContainer">
                     <div class="methodVariableContainer">
@@ -55,9 +55,9 @@
                 <div class="methodTextContainer">
                     <h2 class="methodTitle">variable.length</h2>
                     <p>This method will return the length (number of characters) of the value of the variable. It takes no parameters.</p>
-                    <p>The syntax for this method looks like this: word.length</p>
+                    <p>The syntax for this method looks like this: word.length()</p>
                     <p>For length, the computer counts from 1 (1 = first character). It only counts from 0 in the context of index numbers.</p>
-                    <p>If any characters outside the Basic Multilingual Plane (BMP) are used (like Emojis) it could provide an inaccurate reading (as it counts Emojis as two characters). Try to find what causes an error!</p>
+                    <p>If any characters outside the Basic Multilingual Plane (BMP) are used (like Emojis) it could provide an inaccurate reading (as it counts Emojis as two characters).</p>
                 </div>
                 <div class="methodInputContainer">
                     <div class="methodVariableContainer">
@@ -77,9 +77,9 @@
                 <div class="methodTextContainer">
                     <h2 class="methodTitle">variable.indexOf()</h2>
                     <p>This method will return the index of only the FIRST match of the character put in the brackets.</p>
-                    <p>The syntax for this method looks like this: word.indexOf(character, index).</p>
-                    <p>This method is case sensitive and return -1 if no match is found. It searches from left to right of the word.</p>
-                    <p>A second argument can be used called index. You can choose where indexOf() starts it's search! If this is empty, the default is 0 (the beginning). Negative numbers are treated as 0.</p>
+                    <p>The syntax for this method looks like this: word.indexOf(character, index)</p>
+                    <p>This method is case sensitive, and returns -1 if no match is found. It searches the word from left to right.</p>
+                    <p>A second argument can be used called: index. This lets you choose where indexOf() starts it's search! If this is empty, the default is 0 (the beginning). Negative numbers are treated as 0.</p>
                 </div>
                 <div class="methodInputContainer">
                     <div class="methodVariableContainer">
@@ -107,9 +107,9 @@
                 <div class="methodTextContainer">
                     <h2 class="methodTitle">variable.lastIndexOf()</h2>
                     <p>This method will return the index of only the LAST match of the character put in the brackets.</p>
-                    <p>The syntax for this method looks like this: word.lastIndexOf(character, index).</p>
-                    <p>This method is case sensitive and return -1 if no match is found. It searches from left to right of the word.</p>
-                    <p>A second argument can be used called index. You can choose where lastIndexOf() starts it's search! If this is empty, the default is +infinity (the end up until the beginning). Negative numbers are treated as 0.</p>
+                    <p>The syntax for this method looks like this: word.lastIndexOf(character, index)</p>
+                    <p>This method is case sensitive and returns -1 if no match is found. It searches the word from left to right.</p>
+                    <p>A second argument can be used called: index. You can choose where lastIndexOf() starts it's search! If this is empty, the default is +infinity (the end up until the beginning). Negative numbers are treated as 0.</p>
                 </div>
                 <div class="methodInputContainer">
                     <div class="methodVariableContainer">
@@ -134,6 +134,12 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div id="hero-section2">
+        <p>More methods coming soon!</p>
+    </div>
+    <div id="footer">
+        <p>Made by <a href="https://github.com/aygurs/js-string-methods">aygurs</a> on GitHub</p>
     </div>
     <script src="./index.js"></script>
 </body>
