@@ -3,7 +3,7 @@ JSNuggets provides qn interactive solution to teach junior developers how to use
 
 ## How to Use
 On the website you will be presented with an introductory paragraph, followed by the methods currently available to test.
-Each method will be presented as: variable.method()
+Each method will be presented as: variable.method().
 Your job is to enter arguments for the methods and see if the method still runs correctly. If you see no error, you've entered arguments the method can use to run correctly. If you're presented with an error message, congrats! You've found an error.
 
 ## Future Updates
