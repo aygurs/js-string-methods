@@ -1,5 +1,5 @@
 # ![logo2](https://github.com/aygurs/js-string-methods/assets/132852380/3cf38786-09c6-4629-99b5-28b6869ba8b5)
-JSNuggets provides qn interactive solution to teach junior developers how to use string and array methods in JavaScript.
+JSNuggets provides an interactive solution to teach junior developers how to use string and array methods in JavaScript.
 
 ## How to Use
 On the website you will be presented with an introductory paragraph, followed by the methods currently available to test.
